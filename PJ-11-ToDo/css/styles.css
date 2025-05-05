@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     background: url("../img/bg.jpg");
     background-position: center;

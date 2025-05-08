@@ -4,6 +4,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 h2 {
     margin-bottom: 1.6rem;
     text-align: center;
@@ -29,6 +30,51 @@ h2 {
     border-bottom: 1px dashed #ccc;
 }
 
+
+#random {
+    display: flex;
+    margin: 0 auto;
+}
+
+#random span {
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: #555;
+}
+
+#random a {
+    text-decoration: none;
+    color: #555;
+}
+
+#random a:hover{
+    color: #e9d60a;
+}
+
+
+#random input {
+    border: none;
+    border-bottom: 2px solid #e9d60a;
+    font-size: 1rem;
+    width: 8rem;
+    margin: 0;
+}
+
+.form-control #random-btn {
+    border: 2px solid #fff;
+    background-color: #e9d60a;
+    color: #555;
+    padding: 0.7rem;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.form-control #random-btn:hover {
+    border: 2px solid #e9d60a;
+    background-color: #fff;
+    color: #e9d60a;
+}
+
 .form-control label {
     font-weight: bold;
     margin-bottom: 1rem;
@@ -50,11 +96,6 @@ h2 {
     outline: none;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-}
 .range-input input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
@@ -63,3 +104,82 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: #e9d60a;
     cursor: pointer;
 }
+
+.reference-input {
+    display: flex;
+    align-items: center;
+}
+
+
+.reference-input p {
+    margin-left: 4px;
+}
+
+.form-control input[type="text"] {
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+#inset {
+  align-self: start;
+  height: 20px;
+  width: 20px;
+}
+
+#box {
+    width: 100%;
+    height: 300px;
+    background-color: #e9d60a;
+}
+
+#generated-rule {
+    text-align: center;
+}
+
+#generated-rule p {
+    margin-bottom: 0.5rem;
+}
+
+#rules-area {
+    background-color: #d3d3d3;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #e9d60a;
+    padding: 1rem;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#rules-area:hover {
+    background-color: #dfdfdf;
+}
+
+#copy-instructions {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+@media(max-width: 425px){
+    #box-shadow-generator {
+        flex-direction: column;
+    }
+
+    #controls-container,
+    #preview {
+        padding: 1rem 2rem;
+    }
+
+    #box {
+        width: 60%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    #generaterd-rule {
+        margin-top: 2rem;
+    }
+}
+
+

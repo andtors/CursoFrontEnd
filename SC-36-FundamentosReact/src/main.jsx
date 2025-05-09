@@ -1,16 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Navbar from './Navbar.jsx';
-import "bootstrap/dist/js/bootstrap.bundle.min";  
-import "bootswatch/dist/brite/bootstrap.min.css"
-
 import './index.css'
 import App from './App.jsx'
 
 
+// Comentario fora do HTML
 createRoot(document.getElementById('root')).render(
+  /* Comentario dentro do HTML */
   <StrictMode>
-    <Navbar />
     <App />
-  </StrictMode>
+  </StrictMode>,
 )

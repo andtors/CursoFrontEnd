@@ -1,5 +1,5 @@
+// Folha de estilo do arquivo app.jsx
 import './App.css'
-
 
 // 2 - Imagem em assets
 import night from "./assets/night.jpg"

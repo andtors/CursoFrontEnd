@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Contact from './routes/Contact.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
 import Home from './routes/Home.jsx'
+import Product from './routes/Product.jsx'
 
 import './index.css'
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter ([
       {
         path: "contact",
         element: <Contact />
+      },
+      {
+        path: "/products/:id",
+        element: <Product />
       }
     ]
   },

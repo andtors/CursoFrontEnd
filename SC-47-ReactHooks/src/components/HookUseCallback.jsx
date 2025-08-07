@@ -1,0 +1,24 @@
+import { useCallback, useState } from "react"
+import List from "./List"
+
+const HookUseCallback = () => {
+
+    const [counter, setCounter] = useState(0)
+    
+    const getItemsFromDatabase = useCallback(() => {
+        return ["a", "b", "c"]
+    }, [])
+
+  return (
+    <div>
+        {/* 1 - useCallback*/}
+        <hr />
+        <h2>useCallback</h2>
+        <List getItems={getItemsFromDatabase}></List>
+        <button onClick={() => setCounter(counter + 1)}>Alterar!</button>
+        <p>{counter}</p>
+    </div>
+  )
+}
+
+export default HookUseCallback

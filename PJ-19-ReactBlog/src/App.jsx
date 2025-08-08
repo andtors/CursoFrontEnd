@@ -1,17 +1,17 @@
 import './App.css'
 
-import Navbar from "./components/Navbar"
-
 import { Outlet } from 'react-router-dom'
 
-function App() {
+import Navbar from './components/Navbar'
 
+function App() {
   return (
     <div className="app">
       <Navbar />
-      <h1>Hooks React</h1>
-      
-      <Outlet />
+      <div className="container">
+        <Outlet />
+
+      </div>
     </div>
   )
 }

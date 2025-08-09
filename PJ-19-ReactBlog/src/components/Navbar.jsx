@@ -12,6 +12,7 @@ const Navbar = () => {
             <li><Link to={`/`}>Blog</Link></li>
             <li><Link to={`/`}>Home</Link></li>
             <li><Link to={`/new`} className="new-btn">Novo Post</Link></li>
+            <li><Link to={`/admin`} >Gerenciar</Link></li>
         </ul>
     </nav>
   )

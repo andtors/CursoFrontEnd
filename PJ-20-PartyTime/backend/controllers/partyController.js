@@ -52,7 +52,7 @@ const partyController = {
 
             const response = await partyModel.findById(id)
 
-            if(!party) {
+            if(!response) {
                 json.status(404).json({msg: "Festa não encontrada!"})
                 return
             }

@@ -33,3 +33,5 @@ const MemorySchema = new Schema({
     },
     {timestamps: true}
 )
+
+module.exports = mongoose.model("Memory", MemorySchema)

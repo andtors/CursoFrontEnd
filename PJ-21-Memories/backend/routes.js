@@ -4,7 +4,7 @@ const router = express.Router()
 
 const upload = require("./helpers/upload")
 
-const {createMemory, getAll, get, remove, updateMemory} = require("./controllers/MemoryController")
+const {createMemory, getAll, get, remove, updateMemory, toggleFavorites, addComent} = require("./controllers/MemoryController")
 
 router.post("/", upload.single("image"), 
 (req, res, next) => {
@@ -21,6 +21,7 @@ router.get("/", (req, res) => getAll(req, res))
 router.get("/:id", (req, res) => get(req, res))
 router.delete("/:id", (req, res) => remove(req, res))
 router.patch("/:id", upload.single("image"), (req, res) => updateMemory(req, res))
-
+router.patch("/:id/favorite", (req, res) => toggleFavorites(req, res))
+router.patch("/:id/comment", (req, res) => addComent(req, res))
 
 module.exports = router

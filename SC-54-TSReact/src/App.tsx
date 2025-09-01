@@ -1,34 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  // 1 - variaveis
+  const name: string = "Matheus"
+  const age: number = 30
+  const [isWorking, setIsWorking] = useState(true)
+
+  // 2 - funcoes
+  const useGreeting = (name: string): string => {
+    return `Olá, ${name}`
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>TypeScript com React</h1>
+      <h2>Nome: {name}</h2>
+      <p>Idade: {age}</p>
+      {isWorking ? <p>Está trabalhando</p> : <p>Não está trabalhando</p>}
+      <button onClick={() => setIsWorking(!isWorking)}>Alterar</button>
+      <h3>{useGreeting(name)}</h3>
+    </div>
   )
 }
 

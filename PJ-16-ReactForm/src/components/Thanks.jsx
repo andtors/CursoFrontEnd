@@ -4,7 +4,7 @@ import "./Thanks.css"
 
 const emojiData = {
   unsatisfied: <BsFillEmojiFrownFill />,
-  neutral: <BsEmojiNeutral />,
+  neutral: <BsFillEmojiNeutralFill />,
   satisfied: <BsFillEmojiSmileFill />,
   very_satisfied: <BsFillEmojiHeartEyesFill />
 }
